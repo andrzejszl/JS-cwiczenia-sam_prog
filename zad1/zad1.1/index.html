@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Dodaj element listy</button>
+    <ul></ul>
+
+    <script>
+        let number = 1;
+
+        function addElement() {
+            const newLi = document.createElement("li");
+            newLi.textContent = number;
+            document.querySelector("ul").appendChild(newLi);
+            if (number % 3 === 0) {
+                newLi.style.fontSize = "2rem"
+            }
+            number += 2;
+        }
+
+        document.querySelector("button").addEventListener("click", addElement)
+    </script>
+</body>
+
+</html>

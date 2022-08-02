@@ -1,0 +1,41 @@
+.button {
+    text-align: center;
+}
+
+button {
+    border: 2px dotted black;
+    font-size: 2.5rem;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    margin: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px;
+    border: 2px black solid;
+}
+
+.squareDiv {
+    background-color: #000;
+    color: white;
+
+}
+
+.roundDiv {
+    background-color: #fff;
+    color: black;
+    border-radius: 50%;
+}
