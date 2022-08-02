@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 10000vh;
+        }
+
+        div {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        const divElement = document.createElement("div");
+
+        document.body.appendChild(divElement);
+
+        let grow = true;
+        let size = 150;
+
+        divElement.style.width = size + "px";
+        divElement.style.height = size + "px";
+
+        window.addEventListener("scroll", () => {
+            if (grow) {
+                size += 10;
+                divElement.style.width = size + "px";
+                divElement.style.height = size + "px";
+            } else {
+                size -= 10;
+                divElement.style.width = size + "px";
+                divElement.style.height = size + "px";
+            }
+            if (size >= window.innerWidth / 2) {
+                grow = !grow;
+            } else if (size == 0) {
+                grow = !grow
+            }
+        })
+    </script>
+</body>
+
+</html>
